@@ -4,21 +4,21 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DATABASE_TYPE');
+$CFG->dbtype    = getenv(pgsql);
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('DATABASE_HOST');
-$CFG->dbname    = getenv('DATABASE_NAME');
-$CFG->dbuser    = getenv('DATABASE_USER');
-$CFG->dbpass    = getenv('DATABASE_PASSWORD');
+$CFG->dbhost    = getenv('ec2-54-247-169-129.eu-west-1.compute.amazonaws.com');
+$CFG->dbname    = getenv('d5cnlg2dj9q6lj');
+$CFG->dbuser    = getenv('kdxgezdudyekln');
+$CFG->dbpass    = getenv('fbd566ef9efd6fe325f361fb142872a77ce803fa90c570c24c053965ec128f9f');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => getenv('DATABASE_PORT'),
+  'dbport' => getenv(5432),
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = getenv('http://qoodle.herokuapp.com');
+$CFG->dataroot  = getenv('/tmp');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
