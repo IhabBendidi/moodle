@@ -4,12 +4,12 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('pgsql');
+$CFG->dbtype    = getenv('mysqli');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('ec2-46-137-156-205.eu-west-1.compute.amazonaws.com');
-$CFG->dbname    = getenv('d7vu0kf493kplu');
-$CFG->dbuser    = getenv('zqlcvsosgvzqmn');
-$CFG->dbpass    = getenv('a3415d28096cd392c88fbc3f32f20ed8abd7d8a6faf761ae5b75b4c1131e23d2');
+$CFG->dbhost    = getenv('eu-cdbr-west-03.cleardb.net/');
+$CFG->dbname    = getenv('heroku_65b167f0fa43ee0');
+$CFG->dbuser    = getenv('b8afb3215133a4');
+$CFG->dbpass    = getenv('a03ddb04');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
